@@ -40,12 +40,20 @@ public class GraphSearchEngineImpl implements GraphSearchEngine
 			}
 		}
 		
+		if(visitedNodes.size() == 1)
+		{
+			return visitedNodes;
+		}
 		//Backtrack! Should shortest path start at t and go to s or from s to t.
 		List<Node> shortestPath = new LinkedList<Node>();
-		shortestPath.add(visitedNodes.getLast());
-		while(visitedNodes.size() > 0)
+		shortestPath.add(visitedNodes.get(visitedNodes.size() - 1));
+		visitedNodes.remove(visitedNodes.size() - 1);
+		for(int i = visitedNodes.size() - 1; i >= 0; i--)
 		{
-			
+			if(distanceFromStartMap.get(visitedNodes.get(i).getName()) == distanceFromStartMap.get(shortestPath.get(shortestPath.size() - 1)) - 1)
+			{
+				
+			}
 		}
 		
 		return shortestPath;
