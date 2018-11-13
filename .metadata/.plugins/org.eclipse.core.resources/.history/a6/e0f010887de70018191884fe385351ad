@@ -13,7 +13,7 @@ public class GraphSearchEngineImpl implements GraphSearchEngine
 	public List<Node> findShortestPath (Node s, Node t)
 	{
 		//First perform a bfs.
-		List<Node> visitedNodes = new LinkedList<Node>();
+		LinkedList<Node> visitedNodes = new LinkedList<Node>();
 		HashMap<String, Integer> distanceFromStartMap = new HashMap<String, Integer>();
 		Queue<Node> nodesToVisit = new LinkedList<Node>();
 		

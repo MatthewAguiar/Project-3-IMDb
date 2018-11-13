@@ -25,10 +25,7 @@ public class GraphSearchEngineImpl implements GraphSearchEngine
 			newlyVisitedNode = nodesToVisit.remove(); //dequeue.
 			visitedNodes.add(newlyVisitedNode);
 			
-			if(newlyVisitedNode.equals(t))
-			{
-				break;
-			}
+			
 			
 			for(Node subNode : newlyVisitedNode.getNeighbors())
 			{
@@ -40,14 +37,9 @@ public class GraphSearchEngineImpl implements GraphSearchEngine
 			}
 		}
 		
-		//Backtrack! Should shortest path start at t and go to s or from s to t.
-		List<Node> shortestPath = new LinkedList<Node>();
-		shortestPath.add(visitedNodes.getLast());
-		while(visitedNodes.size() > 0)
-		{
-			
-		}
+		//Backtrack!
 		
-		return shortestPath;
+		
+		return visitedNodes;
 	}
 }

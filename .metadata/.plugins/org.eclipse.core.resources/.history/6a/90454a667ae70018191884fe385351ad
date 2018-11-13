@@ -25,29 +25,16 @@ public class GraphSearchEngineImpl implements GraphSearchEngine
 			newlyVisitedNode = nodesToVisit.remove(); //dequeue.
 			visitedNodes.add(newlyVisitedNode);
 			
-			if(newlyVisitedNode.equals(t))
-			{
-				break;
-			}
-			
 			for(Node subNode : newlyVisitedNode.getNeighbors())
 			{
 				if(!nodesToVisit.contains(subNode) && !visitedNodes.contains(subNode))
 				{
 					nodesToVisit.add(subNode);
-					distanceFromStartMap.put(subNode.getName(), distanceFromStartMap.get(newlyVisitedNode.getName()) + 1);
+					distanceFromStartMap.put(s.getName(), 0);
 				}
 			}
 		}
 		
-		//Backtrack! Should shortest path start at t and go to s or from s to t.
-		List<Node> shortestPath = new LinkedList<Node>();
-		shortestPath.add(visitedNodes.getLast());
-		while(visitedNodes.size() > 0)
-		{
-			
-		}
-		
-		return shortestPath;
+		return visitedNodes;
 	}
 }
