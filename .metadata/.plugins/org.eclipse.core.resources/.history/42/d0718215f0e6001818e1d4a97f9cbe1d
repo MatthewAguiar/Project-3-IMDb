@@ -1,0 +1,11 @@
+import java.util.Scanner;
+import java.io.File;
+
+public class IMDBGraphImpl 
+{	
+	final Scanner _parser
+	public IMDBGraphImpl (String actorsFilename, String actressesFilename) throws java.io.IOException 
+	{
+		 = new Scanner(new File(actorsFilename), "ISO-8859-1");
+	}
+}

@@ -1,0 +1,6 @@
+
+public class IMDBNode implements Node
+{
+	private String _name;
+	
+}

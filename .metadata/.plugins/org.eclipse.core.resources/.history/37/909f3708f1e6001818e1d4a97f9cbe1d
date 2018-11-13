@@ -1,0 +1,13 @@
+import java.io.IOException;
+import System;
+
+public class ParserTestOutput 
+{
+
+	public static void main(String[] args) throws IOException 
+	{
+		final IMDBGraphImpl testParser = new IMDBGraphImpl("actors_test.list", "actresses_test.list");
+		System.out.println();
+	}
+
+}

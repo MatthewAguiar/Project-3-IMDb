@@ -1,0 +1,15 @@
+import java.util.LinkedList;
+
+public class IMDBNode implements Node
+{
+	private String _name;
+	private LinkedList<Node> _neighbors;
+	
+	public IMDBNode(String name, LinkedList<Node> neighbors)
+	{
+		_name = name;
+		_neighbors = neighbors;
+	}
+	
+	
+}
