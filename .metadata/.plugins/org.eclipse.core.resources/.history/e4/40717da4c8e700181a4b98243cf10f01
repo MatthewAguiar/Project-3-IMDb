@@ -1,0 +1,39 @@
+import java.util.Collection;
+import java.util.HashMap;
+import java.util.Scanner;
+import java.io.File;
+
+public class IMDBGraphImpl
+{	
+	private final Scanner _actorParser;
+	private final Scanner _actressParser;
+	private final HashMap<String, Node> _actorNodes = new HashMap<String, Node>();
+	private final HashMap<String, Node> _movieNodes = new HashMap<String, Node>();
+	
+	public IMDBGraphImpl (String actorsFilename, String actressesFilename) throws java.io.IOException 
+	{
+		_actorParser = new Scanner(new File(actorsFilename), "ISO-8859-1");
+		_actressParser = new Scanner(new File(actressesFilename), "ISO-8859-1");
+	}
+	
+	public Collection<? extends Node> getActors()
+	{
+		return actorNodes.values();
+	}
+	
+	public Collection<? extends Node> getMovies()
+	{
+		return movieNodes.values();
+	}
+	
+	public Node getActor(String name)
+	{
+		return actorNodes.get(name);
+	}
+	
+	public Node getMovie(String name)
+	{
+		return movieNodes.get(name);
+	}
+	
+}
