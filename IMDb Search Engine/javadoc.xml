@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project default="javadoc">
+    <target name="javadoc">
+        <javadoc access="public" author="true" classpath="C:\Users\aniartist\Downloads\junit-4.12.jar;C:\Users\aniartist\Downloads\hamcrest-core-1.3.jar" destdir="doc" doctitle="Project 3 IMDB" nodeprecated="false" nodeprecatedlist="false" noindex="false" nonavbar="false" notree="false" overview="C:\Users\aniartist\Documents\Project-3-IMDb\IMDb Search Engine\doc\allclasses-frame.html" packagenames="imdb" source="1.8" sourcefiles="src/ParserTestOutput.java,src/GraphSearchGUI.java,src/IMDBGraphImpl.java,src/GraphPartialTester.java,src/GraphSearchEngine.java,src/Node.java,src/IMDBGraph.java,src/IMDBNode.java,src/GraphSearchEngineImpl.java" sourcepath="src" splitindex="true" use="true" version="true"/>
+    </target>
+</project>
